@@ -1,0 +1,29 @@
+.stylemenu{
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.styleliste{
+    display: flex;
+    list-style-type: none;
+    padding: 0 0 0 0;
+}
+
+li{
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.boutonsite1{
+
+}
+
+.boutonsite2{
+
+}
+
+.boutonsite3{
+
+}
