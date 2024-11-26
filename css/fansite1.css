@@ -5,18 +5,19 @@ header, main, footer {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-}
+}   
 
 body {
     background-color: #f5f5f5;
     color: #333;
     line-height: 1.6;
+    margin: 0;
 }
 
     header {
         background-color: #0f0d0d;
         color: #fff;
-        padding: 20px;
+        padding: 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -31,7 +32,8 @@ body {
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
-            
+            padding: 0;         
+            margin: 10px 0;   
 
             li a {
                 text-decoration: none;
@@ -104,15 +106,24 @@ body {
                 
                 
                 img {
-                    max-width: 100%;
                     border-radius: 10px;
                     margin: 10px 0;
                 }
                 }
             }
 
+.imageacceuil{
+    max-width: 500px;
+    width: 100%;
+    margin-top: 50px;
+}
 
-
+.fan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
     footer {
         background: #222;
