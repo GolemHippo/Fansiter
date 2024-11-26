@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FanSiter</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="menu-burger" onclick="toggleMenu()">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+        </div>
+        <div class="site-title">FanSiter</div>
+    </header>
+
+    <nav class="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+        <a href="#groupes">Groupes</a>
+    </nav>
+
+    <section id="home">
+        <h1>Home</h1>
+        <!-- Contenu de la section Home -->
+    </section>
+
+    <section id="about">
+        <h1>About Us</h1>
+        <!-- Contenu de la section About -->
+    </section>
+
+    <section id="contact">
+        <h1>Contact</h1>
+        <!-- Contenu de la section Contact -->
+    </section>
+
+    <section id="groupes">
+        <h1>Groupes</h1>
+        <!-- Contenu de la section Groupes -->
+    </section>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+
+        // Fermer le menu quand on clique sur un lien
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-menu').classList.remove('active');
+            });
+        });
+
+        // Fermer le menu quand on clique en dehors
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-menu') && !e.target.closest('.menu-burger')) {
+                document.querySelector('.nav-menu').classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
