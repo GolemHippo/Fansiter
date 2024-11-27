@@ -1,133 +1,257 @@
-/* General reset and basic styles */
+* {
+    /* Pour que les tailles soient correctes */
+    box-sizing: border-box;
+  }
+  
+  .menu {
+    /* Pour que le menu reste en place quand on scroll */
+    position: fixed;
+    /* Pour que le menu ne soit pas sur le texte et que ce dernier puisse être sélectionné */
+    width: 0px;
+    height: 96px;
+  }
+  
+
+  #hamburger {
+    /* Pour que la checkbox ne s'affiche pas */
+    display: none;
+  }
+  
+  #hamburger-logo {
+    /* Pour que le curseur soit un pointeur */
+    cursor: pointer;
+    background: black;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* Pour que le menu hamburger s'affiche toujours */
+    text-align: right;
+    /* Pour que le menu hamburger soit "rangé" par défaut */
+    
+    padding:10px;
+    height: 100%;
+
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: column;
+    background: black;
+    overflow: hidden;
+    width: 200px;
+    /* Pour que les liens soient "rangés" par défaut */
+    transform: translateX(-200px);
+    height: 500px;
+  }
+
+  .header_navstyle{
+    display: flex;
+  }  
+  
+  #hamburger-logo,
+  nav {
+    /* Pour qu'il y ait une animation */
+    transition: 0.7s;
+  }
+  
+  /* Lorsque #hamburger est coché, le #hamburger-logo et le nav qui sont dans le même parent changent de propriété */
+  #hamburger:checked ~ #hamburger-logo,
+  #hamburger:checked ~ nav {
+    /* Changement de la position pour afficher les menus */
+    transform: translate(0);
+  }
+  
+/* Submenu container */
+.menu-item {
+    position: relative; /* Set as relative for submenu positioning */
+    padding: 20px 10px 20px 0;
+}
+
+/* Submenu (hidden by default) */
+.submenu {
+    display: none; /* Hide submenu */
+    position: absolute;
+    left: 100; /* Align under the parent */
+    top: 100%; /* Position directly below the parent */
+    background: black;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto;
+}
+
+/* Submenu items */
+.submenu li {
+    border-bottom: 1px solid #444;
+}
+
+.submenu li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    transition: background 0.3s;
+}
+
+.submenu li a:hover {
+    background: #666;
+}
+
+/* Show submenu on hover of the .menu-item */
+.menu-item:hover .submenu {
+    display: block; /* Make the submenu visible */
+}
+
+
+  
+/* Fin du code pour le menu burger */
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 10px;
+  }
+  
+  nav div a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 10px;
+  }
+
+  .menu-header{
+    display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  }
+
+  
+
+  div.menu-item:hover {
+    background: #444;
+  }
+
+  nav a:hover {
+    background: #444;
+  }
+
+ 
+
+.menu-footer{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+
+ body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.headerstyle{
+    display:flex;
+    }
+
+.titrestyle {
+    text-align: center;
+    flex: 1; /* Take up remaining space in the header */
+    background-color:white;
+}
+
+.titrestyle h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.titrestyle h2 {
+    font-size: 1rem;
+    margin: 10px 0;
+    font-weight: lighter;
+}
+
+
+/* Transition du menu burger*/
+
+
+main {
+    margin-left: 0; /* Default position */
+    transition: margin-left 0.5s ease; /* Smooth transition when shifting */
+}
+
+#hamburger:checked ~ main {
+    margin-left: 200px; /* Shift to the right by the width of the menu */
+}
+
+
+
+
+
 
 header, main, footer {
     margin: -10px -08px;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-}   
-
-body {
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
 }
 
-    header {
-        background-color: #0f0d0d;
-        color: #fff;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
 
 
-        h1 {
-            font-size: 2rem;
-        }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            padding: 0;         
-            margin: 10px 0;   
-
-            li a {
-                text-decoration: none;
-                color: #fff;
-                font-size: 1rem;
-                transition: color 0.3s;
-                
-
-                li a:hover {
-                    color: #e72309;
-                    
-                }
-            }
-        }  
-    }   
-
-    main {
+main {
+    padding: 20px;
+    margin: 10px -08px;
+}
+    section {
+        margin: 20px;
         padding: 20px;
-    }
-
-        section {
-            margin: 40px 0;
-            padding: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            justify-content: center;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #e72309;
-            color: #fff;
-            padding: 10px 20px;
-            margin-top: 10px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        
-        .btn:hover {
-            background: #b01a07;
-        }
-
-            section h1, section h2, section h3 {
-                color: #e72309;
-            }
-
-                section p,article {
-                    margin: 10px 0;
-                    font-size: 1.1rem;
-                }
-        
-            .sections-gallery {
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-                flex-wrap: wrap;
-            
-            
-                div {
-                    flex: 1;
-                    min-width: 200px;
-                    max-width: 300px;
-                    background: #e3e3e3;
-                    padding: 20px;
-                    border-radius: 10px;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                
-                
-                img {
-                    border-radius: 10px;
-                    margin: 10px 0;
-                }
-                }
-            }
-
-.imageacceuil{
-    max-width: 500px;
-    width: 100%;
-    margin-top: 50px;
-}
-
-.fan{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-    footer {
-        background: #222;
-        color: #d9cfd6;
-        padding: 10px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: center;
     }
+
+    section h1, section h2, section h3 {
+        color: #e72309;
+    }
+
+        section p,article {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+    .sections-gallery {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+        .sections-gallery div {
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+            background: #e3e3e3;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sections-gallery img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+
+
+        footer{
+            padding: 20px;
+            margin: 20px 08px;
+        }
