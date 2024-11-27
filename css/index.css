@@ -45,10 +45,11 @@ body {
                     }
 
     main {
+
         padding: 20px;
     }
 
-        section {
+        #gallery {
             margin: 40px 0;
             padding: 20px;
             background: #fff;

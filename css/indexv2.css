@@ -40,11 +40,6 @@
     transform: translateX(-200px);
     height: 900px;
   }
-
-  .header_navstyle{
-    display: flex;
-    justify-content: space-between;
-  }  
   
   #hamburger-logo,
   nav {
@@ -62,14 +57,14 @@
 /* Submenu container */
 .menu-item {
     position: relative; /* Set as relative for submenu positioning */
-    padding: 20px 10px 20px 0;
+    padding: 20px 10px;
 }
 
 /* Submenu (hidden by default) */
 .submenu {
     display: none; /* Hide submenu */
     position: absolute;
-    left: 100; /* Align under the parent */
+    left: 0; /* Align under the parent */
     top: 100%; /* Position directly below the parent */
     background: black;
     list-style: none;
@@ -90,7 +85,7 @@
     display: block;
     color: white;
     text-decoration: none;
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 30px;
     transition: background 0.3s;
 }
 
@@ -126,6 +121,11 @@
   }
 
   
+  div.menu-item a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 10px 20px 0px;
+  }
 
   div.menu-item:hover {
     background: #444;
