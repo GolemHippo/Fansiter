@@ -8,6 +8,7 @@
     position: fixed;
     /* Pour que le menu ne soit pas sur le texte et que ce dernier puisse être sélectionné */
     width: 0px;
+    height: 96px;
   }
   
 
@@ -21,13 +22,17 @@
     cursor: pointer;
     background: black;
     width: 200px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     /* Pour que le menu hamburger s'affiche toujours */
     text-align: right;
     /* Pour que le menu hamburger soit "rangé" par défaut */
-    transform: translateX(-168px);
-    padding: 10px;
+    
+    padding:10px;
+    height: 100%;
+
   }
   
   nav {
@@ -38,12 +43,11 @@
     width: 200px;
     /* Pour que les liens soient "rangés" par défaut */
     transform: translateX(-200px);
-    height: 900px;
+    height: 500px;
   }
 
   .header_navstyle{
     display: flex;
-    justify-content: space-between;
   }  
   
   #hamburger-logo,
@@ -135,17 +139,60 @@
     background: #444;
   }
 
-  body {
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
-}
+ 
 
 .menu-footer{
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
 }
+
+
+ body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.headerstyle{
+    display:flex;
+    }
+
+.titrestyle {
+    text-align: center;
+    flex: 1; /* Take up remaining space in the header */
+    background-color:white;
+}
+
+.titrestyle h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.titrestyle h2 {
+    font-size: 1rem;
+    margin: 10px 0;
+    font-weight: lighter;
+}
+
+
+/* Transition du menu burger*/
+
+
+main {
+    margin-left: 0; /* Default position */
+    transition: margin-left 0.5s ease; /* Smooth transition when shifting */
+}
+
+#hamburger:checked ~ main {
+    margin-left: 200px; /* Shift to the right by the width of the menu */
+}
+
+
+
+
+
 
 header, main, footer {
     margin: -10px -08px;
@@ -154,18 +201,15 @@ header, main, footer {
     font-family: 'Arial', sans-serif;
 }
 
+
+
+
 main {
     padding: 20px;
-    margin: 50px -08px;
+    margin: 10px -08px;
 }
-
-footer{
-    padding: 20px;
-    margin: 20px 08px;
-}
-
     section {
-        margin: 40px 20px;
+        margin: 20px;
         padding: 20px;
         background: #fff;
         border-radius: 10px;
@@ -205,7 +249,9 @@ footer{
             margin: 10px 0;
         }
 
-header{
-    display: flex;
-    
-}
+
+
+        footer{
+            padding: 20px;
+            margin: 20px 08px;
+        }
