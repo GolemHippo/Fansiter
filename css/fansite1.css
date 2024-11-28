@@ -51,6 +51,7 @@ header {
   width: 0;
   overflow: hidden;
   transition: 0.3s;
+  position: sticky;
 }
 
 .menu ul {
@@ -145,11 +146,7 @@ ul .submenu{
 
 /* Fin test hover */
 
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
+
 
 .headerstyle{
     display: flex;
