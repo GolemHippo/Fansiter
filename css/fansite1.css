@@ -56,7 +56,7 @@ header {
 .menu ul {
   list-style: none;
   padding: 1rem;
-  width: 250px;
+  width: 20vw;
 }
 
 .menu li {
@@ -72,7 +72,7 @@ main {
 
 /* Checked state animations */
 .burger-checkbox:checked ~ .container .menu {
-  width: 250px;
+  width: 20vw;
 }
 
 
@@ -88,22 +88,24 @@ main {
   transform: translateY(-8.5px) rotate(-45deg);
 }
 
+.burger-checkbox:checked ~ .container main{
+}
+
 /*test hover */
 
 .menu-item {
-  position: relative; /* Set as relative for submenu positioning */
-  padding: 20px 10px 20px 0;
+  /* Set as relative for submenu positioning */
 }
 
 /* Submenu (hidden by default) */
 .submenu {
   display: none; /* Hide submenu */
-  position: absolute;
+  position: relative;
   left: 0; /* Align under the parent */
   top: 100%; /* Position directly below the parent */
-  background: #333;
+  background:radial-gradient(#333, #e3e3e3) ;
   list-style: none;
-  padding: 0;
+  padding: 10px 0;
   margin: 0;
   width: 150px;
   z-index: 10;
@@ -114,13 +116,20 @@ main {
 /* Submenu items */
 .submenu li {
   border-bottom: 1px solid #444;
+  padding: 0;
+}
+
+ul .submenu{
+  padding:0;
+  margin: 20px -10px;
+  width: auto;
 }
 
 .submenu li a {
   display: block;
   color: white;
   text-decoration: none;
-  padding: 10px 10px 10px 10px;
+  padding:10px ;
   transition: background 0.3s;
 }
 
@@ -131,14 +140,24 @@ main {
 /* Show submenu on hover of the .menu-item */
 .menu-item:hover .submenu {
   display: block; /* Make the submenu visible */
+
 }
 
 /* Fin test hover */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
 .headerstyle{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .titreheader{
@@ -152,7 +171,7 @@ main {
 
 main {
     padding: 20px;
-    margin: 10px -08px 10px 250px;
+    margin: 10px -08px
   }
     section {
         margin: 20px;
@@ -174,7 +193,7 @@ main {
   
     .sections-gallery {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         gap: 20px;
         flex-wrap: wrap;
     }

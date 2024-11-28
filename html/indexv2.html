@@ -1,68 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-    <head>
-
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link rel="stylesheet" href="../css/fansite1.css">
-
-        <title>Pink Floyd fandom</title>
-
-    </head>
-
-    <body>
- 
+<head>
     
-        <header>
-    
-    
-            <div class="menu">
-                <!-- Utilisation d'une checkbox -->
-                <input type="checkbox" id="hamburger">
-                <!-- Label de la checkbox -->
-                <label id="hamburger-logo" for="hamburger">☰</label>
-                <!-- Le reste du menu -->
-                <nav class="header_navstyle">
-                    <div class="menu-header">
-                        <a href="indexv2.html">Page d'accueil</a>
-                        
-                        <div class="menu-item">    
-                            <a>Nos Sites</a>
-                            <ul class="submenu">
-                                <li><a href="fansite1.html">Hippolyte</a></li>
-                                <li><a href="fansite2.html">Antoine</a></li>
-                                <li><a href="fansite3.html">Anne-Gaëlle</a></li>
-                                <li><a href="fansite4.html">Geoffrey</a></li>
-                            </ul>
-                        
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="menu-footer">
-                        <a href="#">À propos</a>
-                        <a href="#">Contact</a>
-                    </div>
-                    </nav>
-            </div>
-    
-            <div>
-                
-                <h1>
-                    Fan Site
-                </h1>
-                
-                <h2>
-                    Le site pour les fans de musique
-                </h2>
-            
-            </div>
-        </header>
-       
-        <main>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pink Floyd fandom</title>
+
+    <link rel="stylesheet" href="../css/indexv2.css">
+</head>
+<body>
+  <input type="checkbox" id="burger" class="burger-checkbox">
+  
+  <header class="headerstyle">
+    <label for="burger" class="burger-label">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <h1 class="titreheader">Fan site</h1>
+  </header>
+  
+  <div class="container">
+    <nav class="menu">
+        <ul>
+            <li><a href="indexv2.html">Page d'accueil</a></li>
+            <li>    
+                <div class="menu-item">
+                    <a>Nos Sites</a>
+                        <ul class="submenu">
+                            <li><a href="fansite1.html">Hippolyte</a></li>
+                            <li><a href="fansite2.html">Antoine</a></li>        
+                            <li><a href="fansite3.html">Anne-Gaëlle</a></li>
+                            <li><a href="fansite4.html">Geoffrey</a></li>
+                        </ul>
+                </div> 
+            </li>
+            <li><a href="">A propos</a></li>
+            <li><a href="">Contact</a></li>            
+        </ul>
+    </nav>
+    <main>
         <section id="gallery">
     
             <h2>Gallery</h2>
@@ -94,23 +72,15 @@
                 </div>
             
             </div>    
-    
-        </section>
-    
-    
-    
-    
-    
-    
+            
     </main>
-    
-    
-    <footer>
-        <p>&copy; 2024 FanSiter. All rights reserved.</p>
-    </footer>
-    
-    
-    </body>
-    
-    
-    </html>
+
+  </div>
+
+  
+  <footer>
+    <p>&copy; 2024 FanSiter. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
