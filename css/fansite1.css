@@ -88,22 +88,71 @@ main {
   transform: translateY(-8.5px) rotate(-45deg);
 }
 
+/*test hover */
+
+.menu-item {
+  position: relative; /* Set as relative for submenu positioning */
+  padding: 20px 10px 20px 0;
+}
+
+/* Submenu (hidden by default) */
+.submenu {
+  display: none; /* Hide submenu */
+  position: absolute;
+  left: 0; /* Align under the parent */
+  top: 100%; /* Position directly below the parent */
+  background: #333;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 150px;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+
+/* Submenu items */
+.submenu li {
+  border-bottom: 1px solid #444;
+}
+
+.submenu li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 10px 10px 10px;
+  transition: background 0.3s;
+}
+
+.submenu li a:hover {
+  background: #666;
+}
+
+/* Show submenu on hover of the .menu-item */
+.menu-item:hover .submenu {
+  display: block; /* Make the submenu visible */
+}
+
+/* Fin test hover */
+
 .headerstyle{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.titreheaderstyle{
+.titreheader{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    margin: -15px;
+    color: #e72309;
 }
+
+
 
 main {
     padding: 20px;
-    margin: 10px -08px;
+    margin: 10px -08px 10px 250px;
   }
     section {
         margin: 20px;
