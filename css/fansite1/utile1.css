@@ -1,0 +1,222 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: #333;
+  padding: 1rem;
+}
+
+.burger-checkbox {
+  display: none;
+}
+
+.burger-label {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+
+.burger-label span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: white;
+  transition: 0.3s;
+}
+
+.burger-label span:nth-child(1) { top: 0; }
+.burger-label span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.burger-label span:nth-child(3) { bottom: 0; }
+
+.container {
+  display: flex;
+  flex: 1;
+}
+
+.menu {
+  background: #f1f1f1;
+  width: 0;
+  overflow: hidden;
+  transition: 0.3s;
+  position: sticky;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 1rem;
+  width: 20vw;
+}
+
+.menu li {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  transition: 0.3s;
+}
+
+/* Checked state animations */
+.burger-checkbox:checked ~ .container .menu {
+  width: 20vw;
+}
+
+
+.burger-checkbox:checked + .burger-label span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+
+.burger-checkbox:checked + .burger-label span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-checkbox:checked + .burger-label span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+.burger-checkbox:checked ~ .container main{
+}
+
+/*test hover */
+
+.menu-item {
+  /* Set as relative for submenu positioning */
+}
+
+/* Submenu (hidden by default) */
+.submenu {
+  display: none; /* Hide submenu */
+  position: relative;
+  left: 0; /* Align under the parent */
+  top: 100%; /* Position directly below the parent */
+  background:radial-gradient(#333, #e3e3e3) ;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  width: 150px;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+
+/* Submenu items */
+.submenu li {
+  border-bottom: 1px solid #444;
+  padding: 0;
+}
+
+ul .submenu{
+  padding:0;
+  margin: 20px -10px;
+  width: auto;
+}
+
+.submenu li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding:10px ;
+  transition: background 0.3s;
+}
+
+.submenu li a:hover {
+  background: #666;
+}
+
+/* Show submenu on hover of the .menu-item */
+.menu-item:hover .submenu {
+  display: block; /* Make the submenu visible */
+
+}
+
+/* Fin test hover */
+
+
+
+.headerstyle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.titreheader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e72309;
+}
+
+
+
+main {
+    padding: 20px;
+    margin: 10px -08px
+  }
+    section {
+        margin: 20px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+  
+    section h1, section h2, section h3 {
+        color: #e72309;
+    }
+  
+        section p,article {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+  
+    .sections-gallery {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+      section h2{
+        margin: -20px 0 0 0;
+      } 
+
+        .sections-gallery div {
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+            background: #e3e3e3;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sections-gallery img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+  
+  
+  
+        footer{
+            padding: 20px;
+            margin: 20px 08px;
+        }
