@@ -76,15 +76,6 @@ main {
   width: 20vw;
 }
 
-
-
-
-/*test hover */
-
-.menu-item {
-  /* Set as relative for submenu positioning */
-}
-
 /* Submenu (hidden by default) */
 .submenu {
   display: none; /* Hide submenu */
@@ -171,7 +162,7 @@ main {
   }
   
         section p,article {
-            margin: 10px 0;
+            margin: 10px 10px;
             font-size: 1.1rem;
             
         }
