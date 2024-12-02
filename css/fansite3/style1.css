@@ -58,7 +58,7 @@ body {
 
 
 .header-section {
-    background: url('./unnamed.jpg') no-repeat center center;
+    background: url('../../media/fansite3/unnamed.jpg') no-repeat center center;
     background-size: cover;
     height: 100vh;
     display: flex;
