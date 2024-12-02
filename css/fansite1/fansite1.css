@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  background: #333;
+  background: #000;
   padding: 1rem;
 }
 
@@ -51,7 +51,6 @@ header {
   width: 0;
   overflow: hidden;
   transition: 0.3s;
-  position: sticky;
 }
 
 .menu ul {
@@ -69,6 +68,7 @@ main {
   flex: 1;
   padding: 2rem;
   transition: 0.3s;
+  
 }
 
 /* Checked state animations */
@@ -146,22 +146,17 @@ ul .submenu{
 
 /* Fin test hover */
 
-
-
 .headerstyle{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 .titreheader{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #e72309;
+    color:#FFFF00;
 }
 
 
@@ -180,24 +175,30 @@ main {
     }
   
     section h1, section h2, section h3 {
-        color: #e72309;
+        color:#FFFF00;
+        background: #e3e3e3
     }
+
+  h3{
+    color:#FFFF00
+  }
   
         section p,article {
             margin: 10px 0;
             font-size: 1.1rem;
+            
         }
-  
+  a{
+    text-decoration: none;
+  }
     .sections-gallery {
         display: flex;
         justify-content: space-evenly;
         gap: 20px;
         flex-wrap: wrap;
+        background: #e3e3e3
     }
-      section h2{
-        margin: -20px 0 0 0;
-      } 
-
+    
         .sections-gallery div {
             flex: 1;
             min-width: 200px;
