@@ -76,35 +76,13 @@ main {
   width: 20vw;
 }
 
-
-.burger-checkbox:checked + .burger-label span:nth-child(1) {
-  transform: translateY(8.5px) rotate(45deg);
-}
-
-.burger-checkbox:checked + .burger-label span:nth-child(2) {
-  opacity: 0;
-}
-
-.burger-checkbox:checked + .burger-label span:nth-child(3) {
-  transform: translateY(-8.5px) rotate(-45deg);
-}
-
-.burger-checkbox:checked ~ .container main{
-}
-
-/*test hover */
-
-.menu-item {
-  /* Set as relative for submenu positioning */
-}
-
 /* Submenu (hidden by default) */
 .submenu {
   display: none; /* Hide submenu */
   position: relative;
   left: 0; /* Align under the parent */
   top: 100%; /* Position directly below the parent */
-  background:radial-gradient(#333, #e3e3e3) ;
+  background:radial-gradient(#333, #616060) ;
   list-style: none;
   padding: 10px 0;
   margin: 0;
@@ -176,7 +154,7 @@ main {
   
     section h1, section h2, section h3 {
         color:#FFFF00;
-        background: #e3e3e3
+        background: #616060
     }
 
   h3{
@@ -184,7 +162,7 @@ main {
   }
   
         section p,article {
-            margin: 10px 0;
+            margin: 10px 10px;
             font-size: 1.1rem;
             
         }
@@ -196,14 +174,14 @@ main {
         justify-content: space-evenly;
         gap: 20px;
         flex-wrap: wrap;
-        background: #e3e3e3
+        background: #616060
     }
     
         .sections-gallery div {
             flex: 1;
             min-width: 200px;
             max-width: 300px;
-            background: #e3e3e3;
+            background: #616060;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
